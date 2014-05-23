@@ -1,0 +1,43 @@
+﻿# Ignored Method Regex list
+# one line for one regex
+# matched method won't be called in String or Boolean option
+# you can use metadata token string here, e.g. 0x06000599
+
+#############################################################################
+[Settings]
+#############################################################################
+# ignore all System and Microsoft methods
+IGNORE.SYSTEM.METHODS
+IGNORE.PINVOKE.METHODS
+
+# ignore some special methods, for string option
+# IGNORE.METHODS.WITHOUT.PARAM
+IGNORE.METHODS.RETURN.PATH
+
+# if max.call.error reached, the method will be ignored, for string option
+MAX.CALL.ERROR=100
+
+# if max.instruction.count reached, the method will be ignored, use 0 to ignore the setting
+# this option is applied to both string and flow option
+MAX.INSTRUCTION.COUNT=60000
+
+#############################################################################
+[Methods]
+#############################################################################
+#samples: code smith license functions
+# ^System.Boolean CodeSmith.Engine.CodeSmithLicense::get_
+# ^System.String CodeSmith.Engine.CodeSmithLicense::GetLicenseName
+# CodeSmith.Engine.VersionCheck
+
+# clipboard function
+# GetClipboardText
+# Clipboard::GetText
+
+# io function
+# GetCurrentDirectory
+# GetTempPath
+
+# GetEnvironmentVariable
+# Environment::get_CurrentDirectory
+# Application::get_StartupPath
+# Application::get_ExecutablePath

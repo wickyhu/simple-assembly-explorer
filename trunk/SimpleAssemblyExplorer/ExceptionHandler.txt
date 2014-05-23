@@ -1,0 +1,16 @@
+﻿# Exception Handler (to be removed) keyword list
+
+# inlcude this line to automatically detect and remove the global exception handler by default
+# REMOVE.GLOBAL.EXCEPTION.HANDLER
+
+# Samples
+# SmartAssembly.SmartExceptionsCore.UnhandledException
+
+# Reflector 6.5
+# NS006.c000021::m000
+
+# Reflector 6.6
+# NS006.c000027::m000
+
+# Reflector 7.0
+# NS011.c000063::m000

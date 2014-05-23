@@ -1,0 +1,20 @@
+﻿# Attribute (to be removed) list
+# format:
+# regex[;level]
+#
+# level: 
+# a for assembly level
+# c for class level
+# none for all
+#
+# you can use token here, e.g. 0x02000068
+
+Debugger
+#DebuggerStepThrough
+#DebuggerNonUserCode
+#DebuggerHidden
+#DebuggerStepperBoundaryAttribute
+
+SuppressDisassembly;a
+SuppressIldasmAttribute;a
+#LicenseProviderAttribute;c

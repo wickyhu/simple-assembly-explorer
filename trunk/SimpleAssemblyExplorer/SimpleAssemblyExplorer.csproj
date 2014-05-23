@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C021FD2-B285-4BC2-8639-8F73ACEABC99}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleAssemblyExplorer</RootNamespace>
+    <AssemblyName>SimpleAssemblyExplorer</AssemblyName>
+    <ApplicationIcon>Icons\App.ico</ApplicationIcon>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\sae.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Be.Windows.Forms.HexBox, Version=1.4.2.21498, Culture=neutral, PublicKeyToken=e0e5adf0ebc99863, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\support\Be.Windows.Forms.HexBox.dll</HintPath>
+    </Reference>
+    <Reference Include="DgvFilterPopup, Version=1.1.0.0, Culture=neutral, PublicKeyToken=5d11dc885e61d2bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\support\DgvFilterPopup.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack">
+      <HintPath>..\support\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>..\support\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Reflector, Version=7.0.0.0, Culture=neutral, PublicKeyToken=18ca6bb8dd6a03c3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <ExecutableExtension>.exe</ExecutableExtension>
+      <HintPath>..\support\Reflector.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassEdit\ClassEditBinaryViewHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditBodyGridHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditBookmarkHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditDecompilerHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditHelper.cs" />
+    <Compile Include="ClassEdit\ClassEditILSpyHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditLogHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditReflectorHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditResourceHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditSearchHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditTextViewHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditTreeViewHandler.cs" />
+    <Compile Include="ClassEdit\ClassEditVariableGridHandler.cs" />
+    <Compile Include="Forms\frmClassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClassEdit.Designer.cs">
+      <DependentUpon>frmClassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClassEditCustomAttributes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClassEditCustomAttributes.Designer.cs">
+      <DependentUpon>frmClassEditCustomAttributes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClassEditExceptionHandler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClassEditExceptionHandler.Designer.cs">
+      <DependentUpon>frmClassEditExceptionHandler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClassEditInstruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClassEditInstruction.Designer.cs">
+      <DependentUpon>frmClassEditInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClassEditMoveInstructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClassEditMoveInstructions.Designer.cs">
+      <DependentUpon>frmClassEditMoveInstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClassEditOpenGAC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClassEditOpenGAC.Designer.cs">
+      <DependentUpon>frmClassEditOpenGAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClassEditRename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClassEditRename.Designer.cs">
+      <DependentUpon>frmClassEditRename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClassEditVariable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClassEditVariable.Designer.cs">
+      <DependentUpon>frmClassEditVariable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BamlTranslator.cs" />
+    <Compile Include="Common\DataGridViewTextAndImageColumn.cs" />
+    <Compile Include="Common\DirectoryInfoComparer.cs" />
+    <Compile Include="Common\BamlBaseTranslator.cs" />
+    <Compile Include="Common\BamlILSpyTranslator.cs" />
+    <Compile Include="Forms\frmDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDialogBase.Designer.cs">
+      <DependentUpon>frmDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPluginList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPluginList.Designer.cs">
+      <DependentUpon>frmPluginList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfilerASPNet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfilerASPNet.Designer.cs">
+      <DependentUpon>frmProfilerASPNet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfilerApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfilerApp.Designer.cs">
+      <DependentUpon>frmProfilerApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeobfMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeobfMethod.Designer.cs">
+      <DependentUpon>frmDeobfMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStrongName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStrongName.Designer.cs">
+      <DependentUpon>frmStrongName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVerify.Designer.cs">
+      <DependentUpon>frmVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRunMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRunMethod.Designer.cs">
+      <DependentUpon>frmRunMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeobf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeobf.Designer.cs">
+      <DependentUpon>frmDeobf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAsm.Designer.cs">
+      <DependentUpon>frmAsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDasm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDasm.Designer.cs">
+      <DependentUpon>frmDasm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PluginUtils.cs" />
+    <Compile Include="Common\ProfilerUtils.cs" />
+    <Compile Include="MainForm\MainToolHandler.cs" />
+    <Compile Include="MainForm\MainPluginHandler.cs" />
+    <Compile Include="MainForm\MainHostHandler.cs" />
+    <Compile Include="MainForm\MainTreeViewHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmClassEdit.resx">
+      <DependentUpon>frmClassEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClassEditCustomAttributes.resx">
+      <DependentUpon>frmClassEditCustomAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClassEditExceptionHandler.resx">
+      <DependentUpon>frmClassEditExceptionHandler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClassEditInstruction.resx">
+      <DependentUpon>frmClassEditInstruction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClassEditMoveInstructions.resx">
+      <DependentUpon>frmClassEditMoveInstructions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClassEditOpenGAC.resx">
+      <DependentUpon>frmClassEditOpenGAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClassEditRename.resx">
+      <DependentUpon>frmClassEditRename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClassEditVariable.resx">
+      <DependentUpon>frmClassEditVariable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeobfMethod.resx">
+      <DependentUpon>frmDeobfMethod.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStrongName.resx">
+      <DependentUpon>frmStrongName.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVerify.resx">
+      <DependentUpon>frmVerify.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRunMethod.resx">
+      <DependentUpon>frmRunMethod.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeobf.resx">
+      <DependentUpon>frmDeobf.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAsm.resx">
+      <DependentUpon>frmAsm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDasm.resx">
+      <DependentUpon>frmDasm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Common\TreeNodeSorter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmDialogBase.resx">
+      <DependentUpon>frmDialogBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPluginList.resx">
+      <DependentUpon>frmPluginList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfilerASPNet.resx">
+      <DependentUpon>frmProfilerASPNet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfilerApp.resx">
+      <DependentUpon>frmProfilerApp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pattern.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regex.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keyword.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExceptionHandler.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IgnoredMethod.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attribute.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IgnoredType.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Random.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Dictionary.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\App.ico" />
+    <None Include="..\sae.snk">
+      <Link>sae.snk</Link>
+    </None>
+    <None Include="Icons\ildasm.ico" />
+    <None Include="Icons\reflector.ico" />
+    <None Include="Icons\Copy.bmp" />
+    <None Include="Icons\Edit.bmp" />
+    <None Include="Icons\Delete.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.1.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.10.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.100.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.101.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.102.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.103.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.104.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.105.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.106.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.107.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.108.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.109.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.11.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.110.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.111.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.112.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.113.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.114.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.115.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.116.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.117.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.118.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.119.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.12.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.120.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.121.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.122.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.123.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.124.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.125.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.126.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.127.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.128.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.129.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.13.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.130.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.131.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.132.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.133.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.134.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.135.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.136.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.137.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.138.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.139.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.14.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.140.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.141.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.142.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.143.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.144.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.145.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.146.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.147.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.148.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.149.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.15.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.150.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.151.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.152.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.153.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.154.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.155.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.156.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.157.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.158.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.159.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.16.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.160.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.161.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.162.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.163.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.164.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.165.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.166.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.167.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.168.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.17.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.18.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.19.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.2.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.20.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.21.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.22.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.23.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.24.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.25.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.26.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.27.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.28.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.29.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.3.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.30.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.31.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.32.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.33.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.34.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.35.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.36.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.37.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.38.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.39.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.4.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.40.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.41.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.42.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.43.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.44.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.45.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.46.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.47.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.48.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.49.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.5.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.50.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.51.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.52.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.53.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.54.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.55.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.56.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.57.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.58.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.59.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.6.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.60.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.61.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.62.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.63.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.64.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.65.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.66.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.67.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.68.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.69.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.7.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.70.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.71.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.72.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.73.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.74.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.75.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.76.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.77.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.78.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.79.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.8.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.80.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.81.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.82.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.83.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.84.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.85.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.86.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.87.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.88.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.89.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.9.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.90.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.91.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.92.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.93.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.94.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.95.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.96.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.97.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.98.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.99.bmp" />
+    <Content Include="Icons\Class.Browser\Class.Browser16.png" />
+    <Content Include="Icons\DeleteFolder.bmp" />
+    <Content Include="Icons\NavBack.bmp" />
+    <Content Include="Icons\NavForward.bmp" />
+    <Content Include="Icons\Save.bmp" />
+    <Content Include="Icons\XP Drive 3.5.ico" />
+    <Content Include="Icons\XP Drive CDROM.ico" />
+    <Content Include="Icons\XP Drive Fixed.ico" />
+    <Content Include="Icons\XP Drive Network.ico" />
+    <Content Include="Icons\XP Folder Close.ico" />
+    <Content Include="Icons\XP Folder Open.ico" />
+    <Content Include="Icons\XP No Access.ico" />
+    <Content Include="Plugins\Readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="MSIL.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ILSpy\ILSpy.BamlDecompiler\ILSpy.BamlDecompiler.csproj">
+      <Project>{A6BAD2BA-76BA-461C-8B6D-418607591247}</Project>
+      <Name>ILSpy.BamlDecompiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mono.Cecil\Mono.Cecil.csproj">
+      <Project>{D68133BD-1E63-496E-9EDE-4FBDBF77B486}</Project>
+      <Name>Mono.Cecil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleAssemblyExplorer.Core\SimpleAssemblyExplorer.Core.csproj">
+      <Project>{fad7f221-442f-41cb-98f5-65225c38ee26}</Project>
+      <Name>SimpleAssemblyExplorer.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleAssemblyExplorer.Plugin\SimpleAssemblyExplorer.Plugin.csproj">
+      <Project>{e6859af5-5eb4-409e-9dbb-5b96f407b3a4}</Project>
+      <Name>SimpleAssemblyExplorer.Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleUtils\SimpleUtils.csproj">
+      <Project>{1BD77379-9B94-4774-9834-99B1F2B7CD4F}</Project>
+      <Name>SimpleUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
