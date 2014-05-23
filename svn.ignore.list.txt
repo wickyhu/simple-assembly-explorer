@@ -1,0 +1,1 @@
+*.scc *.vspscc *.user *.ncb *.suo debug release bin obj *.snk

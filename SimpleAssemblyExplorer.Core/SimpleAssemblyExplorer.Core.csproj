@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FAD7F221-442F-41CB-98F5-65225C38EE26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleAssemblyExplorer</RootNamespace>
+    <AssemblyName>SimpleAssemblyExplorer.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\sae.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Reflector, Version=7.0.0.0, Culture=neutral, PublicKeyToken=18ca6bb8dd6a03c3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\support\Reflector.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assembler\Assembler.cs" />
+    <Compile Include="Assembler\AsmOptions.cs" />
+    <Compile Include="Common\ClassEditUtils.cs" />
+    <Compile Include="Common\CommandTool.cs" />
+    <Compile Include="Common\BytesUtils.cs" />
+    <Compile Include="Common\AssemblyUtils.cs" />
+    <Compile Include="Common\CustomAttributeUtils.cs" />
+    <Compile Include="Common\frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FusionNative.cs" />
+    <Compile Include="Common\GacInterop.cs" />
+    <Compile Include="Common\RichTextWriter.cs" />
+    <Compile Include="Common\ShellExtUtils.cs" />
+    <Compile Include="Common\TokenUtils.cs" />
+    <Compile Include="Common\PathUtils.cs" />
+    <Compile Include="Common\OptionsBase.cs" />
+    <Compile Include="Deobfuscator\ForStatementBlock.cs" />
+    <Compile Include="Deobfuscator\InstructionBlock.cs" />
+    <Compile Include="Deobfuscator\DeobfError.cs" />
+    <Compile Include="Deobfuscator\Deobfuscator.Utils.cs" />
+    <Compile Include="Disassembler\DasmOptions.cs" />
+    <Compile Include="Deobfuscator\DeobfOptions.cs" />
+    <Compile Include="Common\CoreAssemblyResolver.cs" />
+    <Compile Include="Common\Config.cs" />
+    <Compile Include="Common\Consts.cs" />
+    <Compile Include="Deobfuscator\Deobfuscator.cs" />
+    <Compile Include="Deobfuscator\DeobfUtils.cs" />
+    <Compile Include="Disassembler\Disassembler.cs" />
+    <Compile Include="Deobfuscator\JumpInstruction.cs" />
+    <Compile Include="ILSpy\DecompilationOptions.cs" />
+    <Compile Include="ILSpy\Languages\CSharpLanguage.cs" />
+    <Compile Include="ILSpy\Languages\ILAstLanguage.cs" />
+    <Compile Include="ILSpy\Languages\ILLanguage.cs" />
+    <Compile Include="ILSpy\Languages\Language.cs" />
+    <Compile Include="ILSpy\Languages\Languages.cs" />
+    <Compile Include="ILSpy\SimpleILSpy.cs" />
+    <Compile Include="ILSpy\VB\ILSpyEnvironmentProvider.cs" />
+    <Compile Include="ILSpy\VB\VBLanguage.cs" />
+    <Compile Include="ILSpy\VB\VBTextOutputFormatter.cs" />
+    <Compile Include="Mono.Reflection\ByteBuffer.cs" />
+    <Compile Include="Mono.Reflection\ModuleScopeTokenResolver.cs" />
+    <Compile Include="Mono.Reflection\DynamicMethodHelper.cs" />
+    <Compile Include="Mono.Reflection\DynamicScopeTokenResolver.cs" />
+    <Compile Include="Mono.Reflection\Instruction.cs" />
+    <Compile Include="Mono.Reflection\ITokenResolver.cs" />
+    <Compile Include="Mono.Reflection\MethodBodyReader.cs" />
+    <Compile Include="PEVerifier\PEVerifyOptions.cs" />
+    <Compile Include="PEVerifier\PEVerifier.cs" />
+    <Compile Include="Reflector\MethodDeclarationInfo.cs" />
+    <Compile Include="Common\RichTextFormatterHelper.cs">
+    </Compile>
+    <Compile Include="Reflector\TextFormatter.cs" />
+    <Compile Include="StrongNamer\GacUtilOptions.cs" />
+    <Compile Include="StrongNamer\GacUtil.cs" />
+    <Compile Include="StrongNamer\StrongNameOptions.cs" />
+    <Compile Include="StrongNamer\SN.cs" />
+    <Compile Include="StrongNamer\StrongNamer.cs" />
+    <Compile Include="StrongNamer\SNOptions.cs" />
+    <Compile Include="TextFile\AttributeFile.cs" />
+    <Compile Include="TextFile\ResourceFile.cs" />
+    <Compile Include="TextFile\RandomFile.cs" />
+    <Compile Include="TextFile\IgnoredTypeFile.cs" />
+    <Compile Include="TextFile\ToolFile.cs" />
+    <Compile Include="TextFile\ProfileFile.cs" />
+    <Compile Include="TextFile\TextFile.cs" />
+    <Compile Include="TextFile\IgnoredMethodFile.cs" />
+    <Compile Include="TextFile\ExceptionHandlerFile.cs" />
+    <Compile Include="TextFile\KeywordFile.cs" />
+    <Compile Include="Common\Evaluator.cs" />
+    <Compile Include="Common\InsUtils.cs" />
+    <Compile Include="TextFile\PatternFile.cs" />
+    <Compile Include="TextFile\RegexFile.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflector\AssemblyResolver.cs" />
+    <Compile Include="Reflector\CecilHelper.cs" />
+    <Compile Include="Reflector\CodeIdentifier.cs" />
+    <Compile Include="Reflector\AssemblyComparer.cs" />
+    <Compile Include="Reflector\LanguageWriterConfiguration.cs" />
+    <Compile Include="Reflector\RemoteController.cs" />
+    <Compile Include="Reflector\RichTextFormatter.cs" />
+    <Compile Include="Reflector\SimpleReflector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\sae.snk">
+      <Link>sae.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ILSpy\ICSharpCode.Decompiler\ICSharpCode.Decompiler.csproj">
+      <Project>{984CC812-9470-4A13-AFF9-CC44068D666C}</Project>
+      <Name>ICSharpCode.Decompiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ILSpy\NRefactory\ICSharpCode.NRefactory.CSharp\ICSharpCode.NRefactory.CSharp.csproj">
+      <Project>{53DCA265-3C3C-42F9-B647-F72BA678122B}</Project>
+      <Name>ICSharpCode.NRefactory.CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ILSpy\NRefactory\ICSharpCode.NRefactory.VB\ICSharpCode.NRefactory.VB.csproj">
+      <Project>{7B82B671-419F-45F4-B778-D9286F996EFA}</Project>
+      <Name>ICSharpCode.NRefactory.VB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ILSpy\NRefactory\ICSharpCode.NRefactory\ICSharpCode.NRefactory.csproj">
+      <Project>{3B2A5653-EC97-4001-BB9B-D90F1AF2C371}</Project>
+      <Name>ICSharpCode.NRefactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mono.Cecil\Mono.Cecil.csproj">
+      <Project>{D68133BD-1E63-496E-9EDE-4FBDBF77B486}</Project>
+      <Name>Mono.Cecil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleAssemblyExplorer.Plugin\SimpleAssemblyExplorer.Plugin.csproj">
+      <Project>{E6859AF5-5EB4-409E-9DBB-5B96F407B3A4}</Project>
+      <Name>SimpleAssemblyExplorer.Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleUtils\SimpleUtils.csproj">
+      <Project>{1BD77379-9B94-4774-9834-99B1F2B7CD4F}</Project>
+      <Name>SimpleUtils</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

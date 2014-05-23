@@ -1,0 +1,33 @@
+﻿# Resource types and display
+# list resource name extension here
+
+[Text]
+.txt
+.xml
+.xsd
+.xslt
+.xaml
+.plsk
+.resx
+.config
+.dtd
+.xshd
+.bat
+.cmd
+
+[Image]
+# this may not always work because it may not be handled with Image class
+.jpg
+.jpeg
+.ico
+.bmp
+.gif
+.png
+.tif
+.tiff
+.emf
+.wmf
+#.cur
+                
+[Binary]
+# all others will be shown as binary

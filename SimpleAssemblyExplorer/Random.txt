@@ -1,0 +1,59 @@
+﻿
+# Name -> Random option
+
+#############################################################################
+[Settings]
+#############################################################################
+ValidNameMaxLength=15
+RandomNameMinLength=5
+
+# If length>ValidNameMaxLength and name contains digit in middle, then it's random name
+DefaultRule1Enabled=true
+
+# Split name by upper or underscore, and analyze the random probability
+DefaultRule2Enabled=true
+AbnormalMinPercentage=0.6
+
+DictionaryEnabled=true
+CustomRulesEnabled=true
+
+#nBayesEnabled=false
+
+#############################################################################
+[BlackCustomRules]
+#############################################################################
+
+# use JScript.Net Eval for rules
+# one line for one rule
+# use {name} for the target name, it's a string type
+
+# Sample: If length>15 and name contains digit, then it's random name. 
+# Note: new RegExp like this could be very slow
+# {name}.length>15 && {name}.match(new RegExp("[0-9]"))==null
+
+#############################################################################
+[WhiteCustomRules]
+#############################################################################
+
+
+#############################################################################
+[BlackList]
+#############################################################################
+
+
+#############################################################################
+[WhiteList]
+#############################################################################
+and
+be
+is
+in
+of
+to
+on
+at
+by
+or
+length
+WndProc
+

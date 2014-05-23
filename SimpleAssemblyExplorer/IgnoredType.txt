@@ -1,0 +1,5 @@
+﻿# Ignored Type Regex list
+# one line for one regex
+# matched type won't be de-obfuscated
+# you can use metadata token string here, e.g. 0x0200002b
+# only use this file when the type is standalone or all related types are ignored, otherwise override may be wrong

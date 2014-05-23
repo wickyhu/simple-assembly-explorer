@@ -1,0 +1,69 @@
+﻿# Patterns List
+# # is used for comments
+# One line for one pattern
+# ; is used to separate opcode group
+# , is used to separate opcode in opcode group
+# [] is used for optional opcode group
+# : is used for boolean jscript expression, op is used for operand
+# * is used for exactly match 
+# ! is used for not-nop opcode
+# ~ is used for reference checking required pattern
+# sequence should be *!~ if used at the same time
+# Only "To NOP" patterns need to be listed
+# nop will be skipped automatically, don't list nop here
+
+# invalid opcode
+unused
+
+ldc.i4;dup;dup;ldc.i4;sub;blt;pop
+ldc.i4;dup;dup;ldc.i4;add;bgt;pop
+break
+*br:3;pop;ldc.i4.0
+!leave;pop;!leave
+ldc.i4;pop
+
+# these two patterns may be useful for some cases, but not common
+# ~*!leave;pop
+# ~*!br;pop
+# NOP.INVALID.POP
+
+# uint + uint < 0 ? clt.un result is always 0, brfalse = br
+ldloc,ldarg;[conv.u4];ldloc,ldarg;[conv.u4];add;ldc.i4.0;clt.un;stloc;ldloc;brtrue
+
+# uint + uint > uint.Max ? cgt.un result is always 0, brfalse = br
+ldloc,ldarg;[conv.u4];ldloc,ldarg;[conv.u4];add;ldc.i4.m1;cgt.un;stloc;ldloc;brtrue
+
+# uint - uint > uint.Max ? cgt.un result is always 0, brfalse = br
+ldloc,ldarg;[conv.u4];ldloc,ldarg;[conv.u4];sub;ldc.i4.m1;cgt.un;stloc;ldloc;brtrue
+
+# uint - uint < 0 ? clt.un result is always 0, brfalse = br 
+ldloc,ldarg;[conv.u4];ldloc,ldarg;[conv.u4];sub;ldc.i4.0;clt.un;stloc;ldloc;brtrue
+
+# uint & 0 = 0 ? ceq result is always 1, brtrue = br
+ldloc,ldarg;[conv.u4];ldc.i4.0;and;ldc.i4.0;ceq;stloc;ldloc;brfalse
+
+# uint > uint.Max ? cgt.un result is always 0, brfalse = br
+ldloc,ldarg;[conv.u4];ldc.i4.m1;cgt.un;stloc;ldloc;brtrue
+
+# uint < 0 ? clt.un result is always 0, brfalse = br
+ldloc,ldarg;[conv.u4];ldc.i4.0;clt.un;stloc;ldloc;brtrue
+
+# uint | int , if op != 0, ceq result is always 0, brfalse = br
+ldloc,ldarg;[conv.u4];ldc.i4:op!=0;or;ldc.i4.0;ceq;stloc;ldloc;brtrue
+
+
+# these two may have problems if there is jump to brtrue/false instruaction
+# ldc.i4, brtrue, if op != 0 then brtrue = br
+ldc.i4:op!=0;brfalse
+!ldc.i4:op!=0;dup;brfalse;dup;brfalse
+!ldc.i4:op!=0;dup;brfalse
+# ldc.i4, brfalse, if op == 0 then brfalse = br
+ldc.i4:op==0;brtrue
+!ldc.i4:op==0;dup;brtrue;dup;brtrue
+!ldc.i4:op==0;dup;brtrue
+
+# this is handled internally, not in pattern.txt
+# ldnull or ldci4;stloc;ldloc;brtrue or brfalse
+
+# 0<1?
+!ldc.i4.0;dup;ldc.i4.1;clt;brfalse

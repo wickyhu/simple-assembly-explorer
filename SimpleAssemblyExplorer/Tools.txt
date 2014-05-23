@@ -1,0 +1,13 @@
+﻿# Customize Tools Menu
+# # is used for comments
+# -;- for separator
+
+# One line for one tool
+# Format: <Tool's Title>;<Executable> [Arguments]
+
+# Samples:
+# My Tool;"c:\program files\my tool\mytool.exe" 1
+
+Edit Tools Menu;Notepad.exe Tools.txt
+-;-
+Caculator;calc.exe
