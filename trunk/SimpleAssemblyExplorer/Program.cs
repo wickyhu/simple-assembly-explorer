@@ -7,18 +7,26 @@ using System.IO;
 using System.Configuration;
 using SimpleUtils;
 using SimpleUtils.Win;
+using System.Runtime.InteropServices;
 
 namespace SimpleAssemblyExplorer
 {
     static class Program
     {
+        [DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main(string[] args)
-        {            
+        {
+            if (Environment.OSVersion.Version.Major >= 6)
+            {
+                SetProcessDPIAware();
+            }
+
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
